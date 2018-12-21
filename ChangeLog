@@ -1,0 +1,85 @@
+Conventions:
+[+]: Added
+[-]: Removed 
+[i]: Improved 
+[f]: Bug Fixed 
+[r]: Refactored
+[*]: Other change
+
+*********************************************************************
+*******************         15-Aug-2017          ********************
+*******************            HEM4.0            ********************
+*********************************************************************
+[+] MLIP
+
+[i] FRUC Improvements (Explicit signaling of uni-/bi- prediction)
+[i] DIMD Improvements (Template sizes are changed)
+[i] FBP Improvements (Proposed Maximum BT Depth Extension)
+[i] Affine Improvements 
+	•	Remove clip mv for affine mode
+	•	Unify AFFINE MVF for storage and MC
+	•	Bug fix for adaptive AFFINE sub-block
+	
+[f] TT fast (Two encoder “bugs” fixes)
+[f] NS gcc friendly. Mismach between Windows and Linux builds was fixed.
+
+[*] Scripts in "sim" folder were updated (not official realease)
+
+
+*********************************************************************
+*******************         17-Jul-2017          ********************
+*******************            HEM3.0            ********************
+*********************************************************************
+[+] Fractional Chroma QP Offset
+[+] Improvement on boundary force partition
+[+]	F0032 as is 
+
+[f] DIMD flag count bug fix
+[f] Bug Fix report of HEM2.0 (intra loops order)
+
+
+*********************************************************************
+*******************         16-Jun-2017          ********************
+*******************            HEM2.1            ********************
+*********************************************************************
+[r] Tiple Tree splitting logic was separated into few functions
+[r] DIMD cose'd duplications were removed
+[*] For keeping bd-rate untouched two MIMICS macros were introduced
+
+
+*********************************************************************
+*******************          7-Jun-2017          ********************
+*******************            HEM2.0            ********************
+*********************************************************************
+[+] JEM6.0 
+[i] Bilateral filter improvements according to Jem6.0
+[-] JVET_F0032_UNI_BI_SELECTION
+
+[+] Intra Sharpening Filter
+[+] DWDIP
+[+] DMVR Improvements (iteration = 7)
+[+] DIMD
+[+] NS Chroma Filtering
+
+[i] Triple Tree Improvements
+[i] NS speed up by lifting scheme
+
+
+*********************************************************************
+*******************         21-Apr-2017          ********************
+*******************            HEM1.1            ********************
+*********************************************************************
+[+] E0028 (BIO speed up)
+
+
+*********************************************************************
+*******************         12-Apr-2017          ********************
+*******************            HEM1.0            ********************
+*********************************************************************
+[+] JEM5.0.1 
+[+] Triple Tree
+[+] Noise Suppressor
+[+] Affine Improvements
+[+] Bilateral Filter
+
+
