@@ -58,6 +58,7 @@ OBJS          	= \
 			$(OBJ_DIR)/WeightPredAnalysis.o \
 			$(OBJ_DIR)/TEncRateCtrl.o \
 			$(OBJ_DIR)/TEncAdaptiveLoopFilter.o \
+			$(OBJ_DIR)/TEncCNNLoopFilter.o
 
 LIBS				= -lpthread
 

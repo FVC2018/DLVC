@@ -63,7 +63,7 @@ public:
 
   static TComBilateralFilter* instance();
   Void createBilateralFilterTable(Int qp);
-  //Void smoothBlockBilateralFilter(TComDataCU* pcCU, UInt uiWidth, UInt uiHeight, Short block[], Int length, Int isInterBlock, Int qp);
+  Void smoothBlockBilateralFilter(TComDataCU* pcCU, UInt uiWidth, UInt uiHeight, Short block[], Int length, Int isInterBlock, Int qp);
   Void smoothBlockBilateralFilter(TComDataCU* pcCU, UInt uiWidth, UInt uiHeight, Short dstRecon[], Int length, Int isInterBlock, Int qp, Pel *piReco, UInt uiSrcStride, UInt uiDstStride);
   Void bilateralFilterInter(TComDataCU *pcCU, UInt uiWidth, UInt uiHeight, Pel *piResi, UInt uiStrideRes, Pel *piPred, UInt uiPredStride, Pel *piReco, UInt uiRecStride, Int clipbd, Int qp);
   Void bilateralFilterIntra(TComDataCU *pcCU, UInt uiWidth, UInt uiHeight, Pel *piReco, UInt uiStride, Int qp);

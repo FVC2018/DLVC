@@ -48,7 +48,7 @@ endif
 # default cpp flags for all configurations
 #CPPFLAGS          = -Wall $(DEFS) -I$(CURDIR)/$(INC_DIR) $(USER_INC_DIRS)
 #CPPFLAGS          = $(DEFS) -I$(CURDIR)/$(INC_DIR) $(USER_INC_DIRS) -Wall -Wshadow -Wno-sign-compare -Werror
-CPPFLAGS          = $(DEFS) -I$(CURDIR)/$(INC_DIR) $(USER_INC_DIRS) -Wall -Wshadow -Wno-sign-compare
+CPPFLAGS          = $(DEFS) -I$(CURDIR)/$(INC_DIR) $(USER_INC_DIRS) -Wall -Wshadow -Wno-sign-compare -std=c++11 -mmmx -msse -msse2 -msse3 -mssse3 -msse4 -msse4a -msse4.1 -msse4.2 -mavx -mavx2
 
 ########## 
 # enforce 32-bit build : 1=yes, 0=no
@@ -116,7 +116,7 @@ RELEASE_LDFLAGS   = -Wl,-soname,lib$(PRJ_NAME).so.$(VER)
 else
 ifeq ($(CONFIG), CONSOLE)
 # linker flags for console
-LDFLAGS           = $(ALL_LDFLAGS)
+LDFLAGS           = $(ALL_LDFLAGS) 
 #
 # debug linker flags for console
 DEBUG_LDFLAGS     =
