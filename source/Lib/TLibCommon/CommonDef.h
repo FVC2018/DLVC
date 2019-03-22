@@ -42,9 +42,10 @@
 #include <iostream>
 #include <assert.h>
 #include <limits>
-
+#ifdef __GNUC__
 #include <tmmintrin.h>
 #include <smmintrin.h>
+#endif
 
 #if _MSC_VER > 1000
 // disable "signed and unsigned mismatch"
