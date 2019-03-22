@@ -341,7 +341,7 @@ protected:
   UInt getDist(Pel* piCur, Int iCurStride, Pel* piOrg, Int iOrgStride, UInt uiBlkWidth, UInt uiBlkHeight, UInt bitDepth = 10);
 #if COMPACT_RESOLUTION_CNN
   Void copyBicubicRecToTmp(TComDataCU* pCtu, Bool isCopyRecToTmp);
-  Void TEncCu::upSampleRecDeep(TComDataCU*& pCtu, ChannelType chType);
+  Void upSampleRecDeep(TComDataCU*& pCtu, ChannelType chType);
 #endif
 #endif
 

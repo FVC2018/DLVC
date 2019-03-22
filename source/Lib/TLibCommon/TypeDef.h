@@ -363,7 +363,7 @@
 ///////////////////////////////////////////////////////////
 #define HEM_TOOLS_ON                                      1
 #if HEM_TOOLS_ON
-#define GuoLei                                            1
+#define GuoLei                                            0
 // Deep learning based tools SPS
 #define BARC_INTER_SPS                                    1
 #define BARC_INTRA_CHROMA_SPS															1
@@ -379,7 +379,7 @@
 #endif
 
 #define USE_CONVLUTIONAL_NEURAL_NETWORK                   1
-#define USE_TENSORFLOW                                    1
+#define USE_TENSORFLOW                                    0
 #define frameworkCombine                                  1
 #if USE_CONVLUTIONAL_NEURAL_NETWORK
 #define CNN_BASED_INLOOP_FILTER                           1 

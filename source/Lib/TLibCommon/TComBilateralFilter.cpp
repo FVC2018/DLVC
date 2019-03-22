@@ -151,6 +151,7 @@ Void TComBilateralFilter::createBilateralFilterTable(Int qp)
   }
 }
 #if ITH_C3_SMT_BL_FILT==C_FXN
+// UInt, UInt, Short*, Int, Int, Int, Pel*, UInt, UInt
 Void TComBilateralFilter::smoothBlockBilateralFilter(TComDataCU* pcCU, UInt uiWidth, UInt uiHeight, Short block[], Int length, Int isInterBlock, Int qp)
 {
   Int rightPixel, centerPixel;
