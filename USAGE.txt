@@ -1,5 +1,5 @@
+[Windows Version]
 Requirements:
-Windows
 Visual Studio 2015 64bit
 GPU supporting CUDA8.0, don't forget to install the GPU driver.
 
@@ -15,3 +15,17 @@ https://pan.baidu.com/s/1RWMfA7OrKzKZw2upJ3E14w password: 8n4s
 7. When running executables, you can use the commands "-dl Caffe/Tensorflow/Opencv" "-mode CPU/GPU" and "-gpuid 0/1/2..." to select different deep learning frameworks, different running modes and specific GPU in your machine.
 
 
+[Linux(Docker) Version]
+Requirements:
+nvidia-docker
+nvidia driver >= 384.81
+
+Steps:
+1. Get and run docker image from https://hub.docker.com/r/huzi96/dlvc-1.0
+```nvidia-docker run -it huzi96/dlvc-1.0:gpu bash```
+
+2. Navigate to working folder
+```cd /opt/dlvc/tests```
+
+3. Run the test [Example]
+```../bin/TAppEncoderStatic -c ../cfg/encoder_lowdelay_jvet10.cfg -c ../cfg/per-sequence/RaceHorses.cfg -i RaceHorses_416x240_30.yuv -q 37 -wdt 416 -hgt 240 -f 30 -fr 30 -b str.bin -o rec.yuv -dl Caffe -mode GPU -gpuid 0```
