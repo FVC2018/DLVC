@@ -5,3 +5,5 @@ Reference software is useful in aiding users of a video coding scheme to establi
 The software has been jointly developed by the University of Science and Technology of China, Huawei Technologies Co. Ltd., Peking University, Harbin Institute of Technology, and Wuhan University. It is developed based on the JEM software, please refer to README_JEM for more details.
 
 For quick usage, please refer to USAGE. A software manual, which contains usage instructions, can be found in the "doc" subdirectory of this software package.
+
+Another project website is at http://139.129.203.44:9008/
