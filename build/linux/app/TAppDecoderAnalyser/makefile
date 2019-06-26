@@ -54,15 +54,16 @@ CAFFE_LIBS          = -L/usr/local/cuda/lib64 -Wl,-rpath,/usr/local/cuda/lib64:/
 	/usr/local/lib/libopencv_core.so.3.4.5 -llapack -lcblas -latlas -lboost_python /usr/local/lib/libopencv_dnn.so.3.4.5 \
 	-Wl,-rpath,/opt/caffe/build/lib:/usr/lib/x86_64-linux-gnu/hdf5/serial/lib:/usr/local/cuda/lib64:/usr/local/lib:::::::: -lglog -lopenblas
 
+TORCH_LIBS          = -L/opt/pytorch/lib/ -ltorch -lc10 -lc10_cuda -lthnvrtc -lfoxi -lcaffe2_detectron_ops_gpu
 
-DYN_DEBUG_LIBS		= -lTLibDecoderAnalyser$(HBD)d -lTLibCommon$(HBD)d -lTLibVideoIO$(HBD)d -lTAppCommon$(HBD)d $(CAFFE_LIBS)
+DYN_DEBUG_LIBS		= -lTLibDecoderAnalyser$(HBD)d -lTLibCommon$(HBD)d -lTLibVideoIO$(HBD)d -lTAppCommon$(HBD)d $(CAFFE_LIBS) $(TORCH_LIBS)
 DYN_DEBUG_PREREQS		= $(LIB_DIR)/libTLibDecoderAnalyser$(HBD)d.a $(LIB_DIR)/libTLibCommon$(HBD)d.a $(LIB_DIR)/libTLibVideoIO$(HBD)d.a $(LIB_DIR)/libTAppCommon$(HBD)d.a
-STAT_DEBUG_LIBS		= -lTLibDecoderAnalyser$(HBD)Staticd -lTLibCommon$(HBD)Staticd -lTLibVideoIO$(HBD)Staticd -lTAppCommon$(HBD)Staticd $(CAFFE_LIBS)
+STAT_DEBUG_LIBS		= -lTLibDecoderAnalyser$(HBD)Staticd -lTLibCommon$(HBD)Staticd -lTLibVideoIO$(HBD)Staticd -lTAppCommon$(HBD)Staticd $(CAFFE_LIBS) $(TORCH_LIBS)
 STAT_DEBUG_PREREQS		= $(LIB_DIR)/libTLibDecoderAnalyser$(HBD)Staticd.a $(LIB_DIR)/libTLibCommon$(HBD)Staticd.a $(LIB_DIR)/libTLibVideoIO$(HBD)Staticd.a $(LIB_DIR)/libTAppCommon$(HBD)Staticd.a
 
-DYN_RELEASE_LIBS	= -lTLibDecoderAnalyser$(HBD) -lTLibCommon$(HBD) -lTLibVideoIO$(HBD) -lTAppCommon$(HBD) $(CAFFE_LIBS)
+DYN_RELEASE_LIBS	= -lTLibDecoderAnalyser$(HBD) -lTLibCommon$(HBD) -lTLibVideoIO$(HBD) -lTAppCommon$(HBD) $(CAFFE_LIBS) $(TORCH_LIBS)
 DYN_RELEASE_PREREQS	= $(LIB_DIR)/libTLibDecoderAnalyser$(HBD).a $(LIB_DIR)/libTLibCommon$(HBD).a $(LIB_DIR)/libTLibVideoIO$(HBD).a $(LIB_DIR)/libTAppCommon$(HBD).a
-STAT_RELEASE_LIBS	= -lTLibDecoderAnalyser$(HBD)Static -lTLibCommon$(HBD)Static -lTLibVideoIO$(HBD)Static -lTAppCommon$(HBD)Static $(CAFFE_LIBS)
+STAT_RELEASE_LIBS	= -lTLibDecoderAnalyser$(HBD)Static -lTLibCommon$(HBD)Static -lTLibVideoIO$(HBD)Static -lTAppCommon$(HBD)Static $(CAFFE_LIBS) $(TORCH_LIBS)
 STAT_RELEASE_PREREQS	= $(LIB_DIR)/libTLibDecoderAnalyser$(HBD)Static.a $(LIB_DIR)/libTLibCommon$(HBD)Static.a $(LIB_DIR)/libTLibVideoIO$(HBD)Static.a $(LIB_DIR)/libTAppCommon$(HBD)Static.a
 
 
