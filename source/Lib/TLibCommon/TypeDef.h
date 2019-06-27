@@ -381,7 +381,7 @@
 #define USE_CONVLUTIONAL_NEURAL_NETWORK                   1
 #define USE_TENSORFLOW                                    0
 #define USE_LIBTORCH                                      1
-#define TEST_LIBTORCH                                     1
+#define TEST_LIBTORCH                                     0
 #define frameworkCombine                                  1
 #if USE_CONVLUTIONAL_NEURAL_NETWORK
 #define CNN_BASED_INLOOP_FILTER                           1 

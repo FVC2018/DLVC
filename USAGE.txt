@@ -6,13 +6,14 @@ GPU supporting CUDA8.0, don't forget to install the GPU driver.
 Steps:
 1. Download caffe, tensorflow and CUDA from:
 https://pan.baidu.com/s/1jlJ1ux-ZVQhzj6Msxn4KgA  password: rq0l
-2. Extract the above caffe and CUDA packages to this folder. As for the tensorflow packages, you should extract the corresponding one according to the running mode CPU or GPU. 
-3. Use VS to open the corresponding solution, and build (Debug or Release, but only x64!)
-4. Please note, after building, there will be some DLL files in the Release/Debug folder. If you want to copy the executables to another machine, do not forget these DLL files
-5. Download caffe and tensorflow models, from:
+2. Download libtorch from https://drive.google.com/open?id=1ZZmZ71RVSLM_c1V_2R7BZ3I0ze29NIES or alternatively https://pan.baidu.com/s/1xC2RG5c7OWMTdjPKhg8yiQ password: gjeg . You can choose to download either the RELEASE build or the DEBUG build. You can also download another version of libtorch from https://pytorch.org/get-started/locally/ (version compatibility not verified).
+3. Extract the above caffe, torch and CUDA packages to this folder. Rename the extracted folder of libtorch to "torch". As for the tensorflow packages, you should extract the corresponding one according to the running mode CPU or GPU. 
+4. Use VS to open the corresponding solution, and build (Debug or Release, but only x64!)
+5. Please note, after building, there will be some DLL files in the Release/Debug folder. If you want to copy the executables to another machine, do not forget these DLL files
+6. Download caffe and tensorflow models, from:
 https://pan.baidu.com/s/1RWMfA7OrKzKZw2upJ3E14w password: 8n4s
-6. Extract the above two packages to working folder
-7. When running executables, you can use the commands "-dl Caffe/Tensorflow/Opencv" "-mode CPU/GPU" and "-gpuid 0/1/2..." to select different deep learning frameworks, different running modes and specific GPU in your machine.
+7. Extract the above two packages to working folder
+8. When running executables, you can use the commands "-dl Caffe/Tensorflow/Opencv" "-mode CPU/GPU" and "-gpuid 0/1/2..." to select different deep learning frameworks, different running modes and specific GPU in your machine.
 
 
 [Linux(Docker) Version]
@@ -21,8 +22,8 @@ nvidia-docker
 nvidia driver >= 384.81
 
 Steps:
-1. Get and run docker image from https://hub.docker.com/r/huzi96/dlvc-1.0
-```nvidia-docker run -it huzi96/dlvc-1.0:gpu bash```
+1. Get and run docker image from https://hub.docker.com/r/huzi96/dlvc-1.1
+```nvidia-docker run -it huzi96/dlvc-1.1:gpu bash```
 
 2. Navigate to working folder
 ```cd /opt/dlvc/tests```
