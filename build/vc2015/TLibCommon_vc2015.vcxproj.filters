@@ -45,6 +45,7 @@
     <ClCompile Include="..\..\source\Lib\trace\u_vga_font.c" />
     <ClCompile Include="..\..\source\Lib\TLibCommon\TComTF.cpp" />
     <ClCompile Include="..\..\source\Lib\TLibCommon\TComOpencv.cpp" />
+    <ClCompile Include="..\..\source\Lib\TLibCommon\TComTorch.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\source\Lib\libmd5\libmd5.h" />
@@ -102,5 +103,6 @@
     <ClInclude Include="..\..\source\Lib\TLibCommon\TComTF.h" />
     <ClInclude Include="..\..\source\Lib\TLibCommon\TensorFlowHeader.h" />
     <ClInclude Include="..\..\source\Lib\TLibCommon\TComOpencv.h" />
+    <ClInclude Include="..\..\source\Lib\TLibCommon\TComTorch.h" />
   </ItemGroup>
 </Project>
