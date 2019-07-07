@@ -45,12 +45,26 @@
 
 #include "../Lib/TLibCommon/Debug.h"
 
+#if TEST_LIBTORCH
+#include "TLibCommon/TComTorch.h"
+#endif
+
 // ====================================================================================================================
 // Main function
 // ====================================================================================================================
 
 int main(int argc, char* argv[])
 {
+
+#if TEST_LIBTORCH
+  fprintf(stdout, "\nTesting LibTorch utilities\n");
+  Double torch_time;
+  clock_t torch_lBefore = clock();
+  TestLibTorchUtil();
+  torch_time = (Double)(clock()-torch_lBefore) / CLOCKS_PER_SEC;
+  fprintf(stdout, "\nLibTorch test runs successfully, duration: %12.3f sec.\n", torch_time);
+#endif
+  
   TAppEncTop  cTAppEncTop;
 
   // print information

@@ -247,3 +247,7 @@ tests/*
 .tags*
 .*.swp
 research/*
+caffe/*
+tensorflow/*
+CUDA/*
+torch/*
